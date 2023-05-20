@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
@@ -24,6 +25,19 @@ module.exports = {
         'footer': '200px minmax(900px, 1fr) 100px',
       },
       colors: {
+        'port-gore': {
+          '50': '#efeffe',
+          '100': '#e1e3fe',
+          '200': '#c9c9fc',
+          '300': '#a9a8f9',
+          '400': '#9085f4',
+          '500': '#7e68ec',
+          '600': '#704be0',
+          '700': '#603dc5',
+          '800': '#4e349f',
+          '900': '#42317e',
+          '950': '#20173b',
+      },
         'mountain-meadow': {
           '50': '#f0fdf4',
           '100': '#dbfde6',

@@ -47,33 +47,46 @@
 }
 
 .reproductor__icon {
+    cursor: pointer;
     @apply w-5;
 }
 
 .card__spotify {
-    @apply rounded-lg bg-black-spotify-900 text-white px-6 py-4;
+    @apply rounded-lg bg-black-spotify-50 dark:bg-black-spotify-900 text-white px-6 py-4;
 }
 
 .card__spotify--maint {
-    @apply rounded-b-lg bg-black-spotify-900 text-white px-6 py-3;
+    @apply rounded-b-lg  dark:bg-black-spotify-900 text-white px-6 py-3;
 }
 
 .card__spotify--mainb {
 
-    @apply rounded-t-lg bg-black-spotify-900 text-white px-6 py-1;
+    @apply rounded-t-lg  dark:bg-black-spotify-900 text-white px-6 py-1;
 }
 
 .header {
     background: #20173B;
 }
-
-.main {
-    background: rgb(18, 18, 18);
-    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 50%, rgba(32, 23, 59, 1) 100%);
+.main__moon {
+    /* background: rgb(18, 18, 18); */
+    background: linear-gradient(0deg, hsl(0, 0%, 7%) 50%, #20173b 100%);
     background-repeat: no-repeat;
     background-attachment: scroll;
     
 }
+.main__sun {
+    /* background: rgb(18, 18, 18); */
+    background: linear-gradient(0deg, rgba(227,227,227,1) 50%, rgba(29,185,84,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+}
+
+
+.buencard__title{
+    @apply  text-black-spotify-400 dark:text-white font-bold z-10;
+}
+
 
 .buenosdias__card::before{
     content: "";
@@ -83,7 +96,11 @@
     width: 100%;
     height: 100%;
     background: #ffffff1f;
+    
    
+}
+.title__hecho{
+    @apply  text-black-spotify-400 dark:text-white font-bold ;
 }
 .buenosdias__card{
     transition: all .3s;
@@ -103,21 +120,17 @@
 }
 
 .maincard__spotify{
-    background: #ffffff08;
-    cursor: pointer;
+    /* background: #ffffffcb; */
+    @apply hover:bg-[#ffffffcb] bg-[#ffffff82] dark:bg-[#ffffff08] dark:hover:bg-[#ffffff14] grid gap-2 p-4 rounded-md cursor-pointer;
     transition: all .2s;
 }
-.maincard__spotify:hover{
-    background: #ffffff14;
-    
-}
+
 .footer__icon{
     display: grid;
     border-radius: 50%;
     width: 2.2em;
     height: 2.2em;
     place-items: center;
-    background: #ffffff22;
 }
 .footer__icon:hover{
   
@@ -195,3 +208,52 @@ input[type=range]::-ms-fill-upper {
 }
 
 /*  */
+
+@media (max-width: 1280px) { 
+
+    .spotify__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .reproductor{
+        justify-content: center;
+        align-content: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        max-width: 450px;
+        height: 550px;
+        z-index: 20;
+        grid-template-columns: 1fr;
+        border-radius: 13px;
+        padding: 2em;
+        transition: all .4s;
+        transform: translateY(150%);
+    }
+    .reproductor--open{
+        transform: translateY(0%);
+    }
+    .cancion{
+        display: grid;
+    }
+    .cancion__img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+
+ }
+
+ @media (max-width: 768px) { 
+
+    body{
+        font-size: 14px;
+    }
+
+  }
